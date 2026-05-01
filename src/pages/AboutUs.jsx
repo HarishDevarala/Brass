@@ -9,7 +9,7 @@ const AboutUs = () => {
         <h1 className="section-title text-gradient-gold">Our Heritage Story</h1>
         <p className="section-subtitle">A legacy of premium brass craftsmanship in Nellore</p>
         
-        <div className="about-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '4rem', marginTop: '4rem', alignItems: 'center' }}>
+        <div className="about-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '4rem', marginTop: '4rem', alignItems: 'center' }}>
           <div className="about-image-wrapper" style={{ position: 'relative', borderRadius: 'var(--radius-lg)', overflow: 'hidden' }}>
             <img src={heroBg} alt="Our Craftsmanship" style={{ width: '100%', height: '500px', objectFit: 'cover' }} />
             <div className="glass-panel" style={{ position: 'absolute', bottom: '20px', left: '20px', right: '20px', padding: '1.5rem', textAlign: 'center' }}>

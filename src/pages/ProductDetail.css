@@ -164,3 +164,36 @@
 [data-theme='dark'] .main-image-container img {
   mix-blend-mode: normal;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .product-detail-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .main-image-container {
+    padding: 1rem;
+  }
+
+  .main-image-container img {
+    max-height: 400px;
+  }
+
+  .product-title-large {
+    font-size: 2rem !important;
+  }
+
+  .price-offer {
+    font-size: 1.5rem;
+  }
+
+  .product-attributes {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .product-trust-badges {
+    grid-template-columns: 1fr;
+  }
+}

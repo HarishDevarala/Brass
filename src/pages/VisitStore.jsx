@@ -10,7 +10,7 @@ const VisitStore = () => {
         <h1 className="section-title text-gradient-gold">Visit Our Showroom</h1>
         <p className="section-subtitle">Experience the luxury of premium brass in person</p>
         
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '4rem', marginTop: '3rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '4rem', marginTop: '3rem' }}>
           
           <div className="store-info-card glass-panel" style={{ padding: '3rem', borderRadius: 'var(--radius-lg)' }}>
             <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '2rem', marginBottom: '2rem', color: 'var(--text-primary)' }}>Store Details</h3>

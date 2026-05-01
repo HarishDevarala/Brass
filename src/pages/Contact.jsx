@@ -16,7 +16,7 @@ const Contact = () => {
           <p className="section-subtitle">We would love to hear from you. Reach out for any queries regarding our premium brass collection.</p>
         </div>
         
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '4rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '4rem' }}>
           
           <div className="contact-info" style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
             <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>

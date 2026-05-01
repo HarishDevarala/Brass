@@ -14,7 +14,7 @@ const CustomOrders = () => {
         <h1 className="section-title text-gradient-gold">Custom & Bulk Orders</h1>
         <p className="section-subtitle">Premium corporate gifting, wedding returns, and temple orders</p>
         
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '4rem', marginTop: '3rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '4rem', marginTop: '3rem' }}>
           
           <div className="glass-panel" style={{ padding: '3rem', borderRadius: 'var(--radius-lg)' }}>
             <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '2rem', marginBottom: '2rem', color: 'var(--text-primary)' }}>
