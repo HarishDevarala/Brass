@@ -13,6 +13,9 @@ import AboutUs from './pages/AboutUs';
 import CustomOrders from './pages/CustomOrders';
 import VisitStore from './pages/VisitStore';
 import Contact from './pages/Contact';
+import Checkout from './pages/Checkout';
+import CartDrawer from './components/CartDrawer';
+import { CartProvider } from './context/CartContext';
 
 import './index.css';
 import './components.css';
@@ -37,10 +40,12 @@ function App() {
   };
 
   return (
-    <Router>
-      <div className="app-container">
-        <Navbar toggleTheme={toggleTheme} theme={theme} />
-        <main style={{ minHeight: '80vh', paddingTop: '80px' }}>
+    <CartProvider>
+      <Router>
+        <div className="app-container">
+          <Navbar toggleTheme={toggleTheme} theme={theme} />
+          <CartDrawer />
+          <main style={{ minHeight: '80vh', paddingTop: '80px' }}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/collections" element={<Collections />} />
@@ -50,12 +55,14 @@ function App() {
             <Route path="/custom-orders" element={<CustomOrders />} />
             <Route path="/visit-store" element={<VisitStore />} />
             <Route path="/contact" element={<Contact />} /> 
+            <Route path="/checkout" element={<Checkout />} />
           </Routes>
         </main>
         <Footer />
         <FloatingWhatsApp />
       </div>
-    </Router>
+      </Router>
+    </CartProvider>
   );
 }
 

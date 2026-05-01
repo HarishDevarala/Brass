@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Heart, MessageCircle, Star, Shield, Truck } from 'lucide-react';
+import { Heart, MessageCircle, Star, Shield, Truck, ShoppingBag } from 'lucide-react';
 import { products, storeInfo } from '../data/dummyData';
+import { useCart } from '../context/CartContext';
 import './ProductDetail.css';
 
 const ProductDetail = () => {
   const { id } = useParams();
   const product = products.find(p => p.id === id) || products[0];
   const [isWishlisted, setIsWishlisted] = useState(false);
+  const { addToCart } = useCart();
 
   const handleWhatsApp = () => {
     const phoneNumber = storeInfo.phone.replace(/[^0-9]/g, '');
@@ -86,9 +88,20 @@ const ProductDetail = () => {
               </div>
             </div>
 
-            <div className="product-actions-large" style={{ display: 'flex', gap: '1rem', marginBottom: '3rem' }}>
-              <button className="btn btn-primary" onClick={handleWhatsApp} style={{ flex: '1', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', fontSize: '1.1rem', padding: '16px' }}>
-                <MessageCircle size={22} /> Enquire to Buy
+            <div className="product-actions-large" style={{ display: 'flex', gap: '1rem', marginBottom: '3rem', flexWrap: 'wrap' }}>
+              <button 
+                className="btn btn-primary" 
+                onClick={() => addToCart(product)} 
+                style={{ flex: '1', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', fontSize: '1.1rem', padding: '16px', minWidth: '200px' }}
+              >
+                <ShoppingBag size={22} /> Add to Cart
+              </button>
+              <button 
+                className="btn btn-outline" 
+                onClick={handleWhatsApp} 
+                style={{ flex: '1', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', fontSize: '1.1rem', padding: '16px', minWidth: '200px' }}
+              >
+                <MessageCircle size={22} /> Enquire on WhatsApp
               </button>
             </div>
 

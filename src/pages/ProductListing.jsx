@@ -29,7 +29,7 @@ const ProductListing = () => {
           </div>
         </div>
 
-        <div className="category-pills mb-10" style={{ display: 'flex', gap: '1rem', overflowX: 'auto', paddingBottom: '1rem', marginBottom: '2.5rem' }}>
+        <div className="category-pills mb-10" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', paddingBottom: '1rem', marginBottom: '2.5rem' }}>
           <button 
             className={`btn ${activeCategory === 'All' ? 'btn-primary' : 'btn-outline'}`}
             onClick={() => setActiveCategory('All')}

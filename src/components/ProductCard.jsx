@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useCart } from '../context/CartContext';
+import { ShoppingBag } from 'lucide-react';
 
 const ProductCard = ({ product }) => {
   const [isWishlisted, setIsWishlisted] = useState(false);
+  const { addToCart } = useCart();
 
   return (
     <div className="product-card hover-lift">
@@ -33,8 +36,27 @@ const ProductCard = ({ product }) => {
           <span className="product-original-price">₹{product.price.toLocaleString()}</span>
         </div>
         
-        <div className="product-actions">
-          <button className="btn btn-outline btn-full">Quick View</button>
+        <div className="product-actions" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
+          <button 
+            className="btn btn-outline"
+            style={{ padding: '10px' }}
+            onClick={(e) => {
+              e.preventDefault();
+              // In a real app this might open a modal, but for now we'll just link or keep it dummy
+            }}
+          >
+            Quick View
+          </button>
+          <button 
+            className="btn btn-primary"
+            style={{ padding: '10px' }}
+            onClick={(e) => {
+              e.preventDefault();
+              addToCart(product);
+            }}
+          >
+            <ShoppingBag size={16} />
+          </button>
         </div>
       </div>
     </div>
